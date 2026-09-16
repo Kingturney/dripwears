@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart — DRIP&OUTFITS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">DRIP&OUTFITS</div>
+    <div class="nav-links">
+      <div class="dropdown">
+        <button>Shop ▾</button>
+        <div class="dropdown-menu">
+          <a href="clothes.html">👕 Clothes</a>
+          <a href="shoes.html">👟 Shoes</a>
+          <a href="others.html">🕶️ Other Items</a>
+        </div>
+      </div>
+      <a href="cart.html" class="cart-btn">🛒 Cart <span class="cart-count">0</span></a>
+      <a href="#" class="whatsapp-btn" target="_blank">💬 WhatsApp Us</a>
+    </div>
+  </nav>
+
+  <!-- PAGE TITLE -->
+  <h2 class="section-title">🛒 YOUR CART</h2>
+
+  <!-- CART CONTAINER -->
+  <div class="cart-container">
+    <div id="cartItems"></div>
+
+    <div class="cart-summary" id="cartSummary" style="display:none;">
+      <h2>Order Summary</h2>
+      <div class="total-row">
+        <span>Total:</span>
+        <span id="cartTotal">KSh 0</span>
+      </div>
+      <button class="checkout-btn" onclick="placeOrder()">
+        📲 PLACE ORDER 
+      </button>
+      <p style="color:#8892b0; font-size:0.85rem; margin-top:1rem; text-align:center;">
+        Your order details will be sent — just hit send!
+      </p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 DRIP&OUTFITS — All rights reserved.
+    <br><a href="#" class="whatsapp-btn" style="margin-top:1rem;display:inline-flex;">💬 Chat on WhatsApp</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

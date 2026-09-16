@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoes — DRIP&OUTFITS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">DRIP&OUTFITS</div>
+    <div class="nav-links">
+      <div class="dropdown">
+        <button>Shop ▾</button>
+        <div class="dropdown-menu">
+          <a href="clothes.html">👕 Clothes</a>
+          <a href="shoes.html">👟 Shoes</a>
+          <a href="others.html">🕶️ Other Items</a>
+        </div>
+      </div>
+      <a href="cart.html" class="cart-btn">🛒 Cart <span class="cart-count">0</span></a>
+      <a href="#" class="whatsapp-btn" target="_blank">💬 WhatsApp Us</a>
+    </div>
+  </nav>
+
+  <h2 class="section-title">👟 SHOES</h2>
+
+  <div class="products">
+
+    <div class="product-card">
+      <img class="product-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Sneakers">
+      <div class="product-info">
+        <div class="product-name">Air Flex Sneakers</div>
+        <div class="product-desc">Street-ready comfort</div>
+        <div class="product-price">KSh 4,500</div>
+        <button class="add-btn" onclick="addToCart('s1','Air Flex Sneakers',4500,'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500')">ADD TO CART</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-img" src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500" alt="Running Shoes">
+      <div class="product-info">
+        <div class="product-name">Runner Pro</div>
+        <div class="product-desc">Lightweight running shoe</div>
+        <div class="product-price">KSh 3,800</div>
+        <button class="add-btn" onclick="addToCart('s2','Runner Pro',3800,'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500')">ADD TO CART</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-img" src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500" alt="High Tops">
+      <div class="product-info">
+        <div class="product-name">High-Top Classics</div>
+        <div class="product-desc">Timeless canvas high-tops</div>
+        <div class="product-price">KSh 3,200</div>
+        <button class="add-btn" onclick="addToCart('s3','High-Top Classics',3200,'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500')">ADD TO CART</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-img" src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500" alt="Boots">
+      <div class="product-info">
+        <div class="product-name">Urban Boots</div>
+        <div class="product-desc">Leather, all-weather</div>
+        <div class="product-price">KSh 5,500</div>
+        <button class="add-btn" onclick="addToCart('s4','Urban Boots',5500,'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500')">ADD TO CART</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-img" src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500" alt="Slides">
+      <div class="product-info">
+        <div class="product-name">Comfy Slides</div>
+        <div class="product-desc">Perfect for chilling</div>
+        <div class="product-price">KSh 1,200</div>
+        <button class="add-btn" onclick="addToCart('s5','Comfy Slides',1200,'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500')">ADD TO CART</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-img" src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=500" alt="Formal">
+      <div class="product-info">
+        <div class="product-name">Formal Oxfords</div>
+        <div class="product-desc">Sharp, polished leather</div>
+        <div class="product-price">KSh 4,200</div>
+        <button class="add-btn" onclick="addToCart('s6','Formal Oxfords',4200,'https://images.unsplash.com/photo-1552346154-21d32810aba3?w=500')">ADD TO CART</button>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 DRIP&OUTFITS — All rights reserved.
+    <br><a href="#" class="whatsapp-btn" style="margin-top:1rem;display:inline-flex;">💬 Chat on WhatsApp</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

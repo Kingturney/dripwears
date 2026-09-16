@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DRIP&OUTFITS — Fresh Fits, Fresh Drip</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">DRIP&OUTFITS</div>
+    <div class="nav-links">
+      <div class="dropdown">
+        <button>Shop ▾</button>
+        <div class="dropdown-menu">
+          <a href="clothes.html">👕 Clothes</a>
+          <a href="shoes.html">👟 Shoes</a>
+          <a href="others.html">🕶️ Other Items</a>
+        </div>
+      </div>
+      <a href="cart.html" class="cart-btn">
+        🛒 Cart <span class="cart-count">0</span>
+      </a>
+      <a href="#" class="whatsapp-btn" target="_blank">
+        💬 WhatsApp Us
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>DRIP&OUTFITS</h1>
+    <p>Fresh fits, fly kicks, and everything in between. Shop the drip. Own the look.</p>
+    <a href="#featured" class="whatsapp-btn" style="text-decoration:none;">Shop Now ↓</a>
+  </section>
+
+  <!-- FEATURED -->
+  <h2 class="section-title" id="featured">🔥 FEATURED DROPS</h2>
+  <div class="products">
+
+    <div class="product-card">
+      <img class="product-img" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" alt="Oversized Tee">
+      <div class="product-info">
+        <div class="product-name">Neon Oversized Tee</div>
+        <div class="product-desc">Premium cotton, unisex fit</div>
+        <div class="product-price">KSh 1,500</div>
+        <button class="add-btn" onclick="addToCart('t1','Neon Oversized Tee',1500,'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500')">ADD TO CART</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Sneakers">
+      <div class="product-info">
+        <div class="product-name">Air Flex Sneakers</div>
+        <div class="product-desc">Street-ready comfort</div>
+        <div class="product-price">KSh 4,500</div>
+        <button class="add-btn" onclick="addToCart('s1','Air Flex Sneakers',4500,'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500')">ADD TO CART</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-img" src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500" alt="Cap">
+      <div class="product-info">
+        <div class="product-name">Snapback Cap</div>
+        <div class="product-desc">Adjustable, one size fits all</div>
+        <div class="product-price">KSh 800</div>
+        <button class="add-btn" onclick="addToCart('o1','Snapback Cap',800,'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500')">ADD TO CART</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-img" src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500" alt="Hoodie">
+      <div class="product-info">
+        <div class="product-name">Neon Hoodie</div>
+        <div class="product-desc">Warm, bold, unisex</div>
+        <div class="product-price">KSh 2,800</div>
+        <button class="add-btn" onclick="addToCart('t2','Neon Hoodie',2800,'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500')">ADD TO CART</button>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 DRIP&OUTFITS — All rights reserved.
+    <br><a href="#" class="whatsapp-btn" style="margin-top:1rem;display:inline-flex;">💬 Chat on WhatsApp</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
