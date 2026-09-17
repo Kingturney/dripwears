@@ -253,10 +253,10 @@ img { max-width: 100%; display: block; }
 
 .products {
   display: grid;
-  /* min() keeps cards from ever overflowing a narrow screen */
-  grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+  /* 5 across on desktop, stepped down at each breakpoint below */
+  grid-template-columns: repeat(5, 1fr);
   gap: var(--gap);
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 max(var(--pad-x), var(--safe-l)) 4rem max(var(--pad-x), var(--safe-r));
 }
@@ -468,18 +468,20 @@ footer a { color: var(--neon-green); text-decoration: none; }
 
 /* ================== BREAKPOINTS ================== */
 
-/* Large desktops / iMac — wider grid, bigger cards */
-@media (min-width: 1440px) {
-  .products {
-    max-width: 1400px;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  }
+/* Large desktops / iMac — 5 across with room to breathe */
+@media (min-width: 1600px) {
+  .products { max-width: 1700px; }
   .cart-container { max-width: 1000px; }
 }
 
-/* Tablets landscape / small laptops — iPad Pro, Surface */
+/* Laptops — 4 across */
+@media (max-width: 1200px) {
+  .products { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Small laptops / tablets landscape — iPad Pro, Surface */
 @media (max-width: 1024px) {
-  .products { grid-template-columns: repeat(auto-fill, minmax(min(210px, 100%), 1fr)); }
+  .products { grid-template-columns: repeat(4, 1fr); }
 }
 
 /* Tablets portrait — iPad, iPad Mini, Galaxy Tab */
@@ -503,10 +505,30 @@ footer a { color: var(--neon-green); text-decoration: none; }
   /* Menu opens toward the screen, never off the right edge */
   .dropdown-menu { left: 0; right: auto; }
 
-  /* Two products per row reads much better than one giant card */
+  /* Phones get a real grid too — 3 across, compact cards */
   .products {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
     padding-bottom: 3rem;
+  }
+  .product-card { border-radius: 9px; }
+  .product-info { padding: 0.5rem; gap: 0.2rem; }
+  .product-name { font-size: 0.78rem; }
+  .product-price { font-size: 0.82rem; }
+  .product-desc {
+    font-size: 0.68rem;
+    margin-bottom: 0.35rem;
+    /* keep every card the same height — trim long descriptions */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .add-btn {
+    padding: 0.5rem 0.2rem;
+    min-height: 38px;
+    font-size: 0.62rem;
+    letter-spacing: 0.3px;
   }
 
   /* Cart item: image + text on top, controls on their own row */
@@ -542,14 +564,19 @@ footer a { color: var(--neon-green); text-decoration: none; }
   }
   .cart-btn, .whatsapp-btn { flex: 1 1 0; }
 
-  .products { gap: 0.8rem; }
+  /* Under ~480px, 3 across gets too tight — go to 2 */
+  .products { grid-template-columns: repeat(2, 1fr); gap: 0.7rem; }
+  .product-name { font-size: 0.85rem; }
+  .product-price { font-size: 0.95rem; }
+  .product-desc { font-size: 0.72rem; }
+  .add-btn { font-size: 0.7rem; min-height: 42px; }
   .cart-item { grid-template-columns: 60px 1fr; }
   .cart-item img { width: 60px; height: 60px; }
 }
 
 /* Very small / folded phones — Galaxy Fold cover, Duo single pane */
 @media (max-width: 360px) {
-  .products { grid-template-columns: 1fr; }
+  .products { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
   .cart-item {
     grid-template-columns: 1fr;
     grid-template-areas: "img" "info" "qty" "remove";
